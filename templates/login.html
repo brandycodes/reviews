@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Log in to Spacious!</h1>
+<form action="/login" method="post">
+    <table>
+        <tr>
+            <td><label for="username">username</label></td>
+            <td>
+                <input name="username" type="username" value="{{ username }}">
+            </td>
+        </tr>
+        <tr>
+            <td><label for="password">Password</label></td>
+            <td>
+                <input name="password" type="password">
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Login to Spacious">
+</form>
+<p>Don't have an account? <a href="/register">Create one!</a></p>    
+{% endblock %}

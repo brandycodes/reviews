@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h2>Spacious Reviews by {{author}}</h2>
+
+    {% if reviews|length == 0 %}
+    <p>No reviews by {{author}} yet!</p>
+
+    {% else %}
+
+        {% for review in reviews %}
+            <a href="./reviews?id={{review.id}}">
+                <h3>{{review.title}}</h3>
+            </a>
+            <p>{{review.body}}</p>
+            <p class="review_author">written by 
+                <a href="./reviews?user={{author}}">{{author}}</a>
+            </p>
+            <hr />
+        {% endfor %}
+    
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <link rel="stylesheet" type="text/css" href="./static/styles/custom_style.css">
+    </head>
+    <body>
+        <h1>Spacious</h1>
+
+        {% with messages = get_flashed_messages(with_categories=True) %}
+        <ul>
+            {% for category,message in messages %}
+                <li class="{{category}}">{{message}}</li>
+            {% endfor %}
+        </ul>
+        {% endwith %}
+
+        <nav>
+            <a href='/'>Home</a> | 
+            <a href='/reviews'>Review Feed</a> | 
+            <a href='/newreview'>New Review</a> |
+            <a href='/login'>Log In</a> |
+            <a href='/register'>Register</a> |
+            <a href='/logout'>Log Out</a>
+        </nav>
+            
+        <hr />
+
+        {% block content %}
+        {% endblock %}
+
+    </body>
+</html>

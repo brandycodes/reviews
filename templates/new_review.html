@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h2>New Review Entry</h2>
+    <form method='POST' action="/newreview">
+        <label for='title'>
+            New Review Title:<br>
+            <input name="title" type="text" value='{{review_title}}' />
+            <span class="error">{{title_error}}</span>
+        </label>
+        <br>
+        <label for='body'>
+            Review Comments:<br>
+            <textarea name="body" type="text" />{{review_body}}</textarea>
+            <span class="error">{{body_error}}</span>
+        </label>
+        <br>
+        <input type="submit" value='Post New Review' />
+    </form>
+
+{% endblock %}

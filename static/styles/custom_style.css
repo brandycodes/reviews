@@ -1,0 +1,12 @@
+.error { color: red; }
+.review_owner { color: #444;
+    font-size: xx-small;
+    font-style: italic; }
+
+h1{ font-size:xx-large; font-weight:bold; }
+h2{ font-size:large; }
+h3{ font-size:large; }
+
+nav #user-account {
+    float: right;
+}
